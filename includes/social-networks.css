@@ -4,8 +4,8 @@
 }
 
 :root {
-    --grey: #6E6E6E;
-    --blue: #1849AB;
+    --grey: #3d3c42;
+    --blue: #7f5283;
 }
 
 .switch {
@@ -48,7 +48,7 @@ input:checked+.slider {
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 0 4px rgba(21, 156, 228, 0.7);
+    box-shadow: 0 0 0 4px #a6d1e6;
     outline: none;
 }
 
