@@ -118,10 +118,10 @@ function social_media_icons_front($social_media_icons)
     // Creation of the HTML structure
     $html = "<div class='container row'><div class='h3'>Partager sur : </div>";
 
-    // Shake if social Facebook is activate
+    // Shake if social Facebook is activate and render html code
     if (get_option("social-media-facebook") == 'activate') {
         $html = $html . "
-        <div class='col-1'>
+        <div class='col-1' style='margin-left: 5px; margin-right: 5px'>
             <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=" . $link . "'>
                 <i class='fab fa-facebook-square fa-2x'></i>
             </a>
@@ -131,7 +131,7 @@ function social_media_icons_front($social_media_icons)
     // Shake if social Twitter is activate
     if (get_option("social-media-twitter") == 'activate') {
         $html = $html . "
-        <div class='col-1'>
+        <div class='col-1' style='margin-left: 5px; margin-right: 5px'>
             <a target='_blank' href='https://twitter.com/share?url=" . $link . "'>
                 <i class='fab fa-twitter-square fa-2x'></i>
             </a>
@@ -141,7 +141,7 @@ function social_media_icons_front($social_media_icons)
     // // Shake if social LinkedIn is activate
     if (get_option("social-media-linkedin") == 'activate') {
         $html = $html . "
-        <div class='col-1'>
+        <div class='col-1' style='margin-left: 5px; margin-right: 5px'>
             <a target='_blank' href='http://www.linkedin.com/shareArticle?url=" . $link . "'>
                 <i class='fab fa-linkedin fa-2x'></i>
             </a>
