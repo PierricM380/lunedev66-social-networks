@@ -1,0 +1,4 @@
+#wpadminbar #wp-admin-bar-reseaux-sociaux>.ab-item:before {
+    content: "\f237";
+    top: 2px;
+}
