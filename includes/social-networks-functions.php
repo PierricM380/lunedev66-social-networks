@@ -47,9 +47,9 @@ function social_media_section_settings()
     add_settings_section("social_media_section", "", null, "social-media");
 
     // Fields creation
-    add_settings_field("social-media-facebook", "Partager sur Facebook", "social_media_facebook_switch", "social-media", "social_media_section");
-    add_settings_field("social-media-linkedin", "Partager sur Linkedin", "social_media_linkedin_switch", "social-media", "social_media_section");
-    add_settings_field("social-media-twitter", "Partager sur Twitter", "social_media_twitter_switch", "social-media", "social_media_section");
+    add_settings_field("social-media-facebook", "Diffuser sur Facebook", "social_media_facebook_switch", "social-media", "social_media_section");
+    add_settings_field("social-media-linkedin", "Diffuser sur Linkedin", "social_media_linkedin_switch", "social-media", "social_media_section");
+    add_settings_field("social-media-twitter", "Diffuser sur Twitter", "social_media_twitter_switch", "social-media", "social_media_section");
 
     // Saving fields
     register_setting("social_media_section", "social-media-facebook");
