@@ -92,6 +92,7 @@ function social_media_page()
 { ?>
     <div class="container">
         <h1>Réseaux sociaux</h1>
+        <p>Veuillez sélectionner les réseaux sociaux que vous souhaitez faire apparaître dans vos articles : </p>
 
         <form method="post" action="options.php">
             <?php
@@ -102,3 +103,54 @@ function social_media_page()
         </form>
     </div>
 <?php }
+
+/*  Creation of social networks section - html  */
+
+// Function that which will allow me to retrieve the status of each of the social networks, and display or not them
+function social_media_icons_front($social_media_icons)
+{
+    // Creation and retrieval of variables
+    global $post;
+
+    $link = get_permalink($post->ID);
+    $link = esc_url($link);
+
+    // Creation of the HTML structure
+    $html = "<div class='container row'><div class='h3'>Partager sur : </div>";
+
+    // Shake if social Facebook is activate
+    if (get_option("social-media-facebook") == 'activate') {
+        $html = $html . "
+        <div class='col-1'>
+            <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=" . $link . "'>
+                <i class='fab fa-facebook-square fa-2x'></i>
+            </a>
+        </div>";
+    }
+
+    // Shake if social Twitter is activate
+    if (get_option("social-media-twitter") == 'activate') {
+        $html = $html . "
+        <div class='col-1'>
+            <a target='_blank' href='https://twitter.com/share?url=" . $link . "'>
+                <i class='fab fa-twitter-square fa-2x'></i>
+            </a>
+        </div>";
+    }
+
+    // // Shake if social LinkedIn is activate
+    if (get_option("social-media-linkedin") == 'activate') {
+        $html = $html . "
+        <div class='col-1'>
+            <a target='_blank' href='http://www.linkedin.com/shareArticle?url=" . $link . "'>
+                <i class='fab fa-linkedin fa-2x'></i>
+            </a>
+        </div>";
+    }
+
+    $social_media_icons = $social_media_icons . $html;
+    return $social_media_icons;
+}
+
+// Add function in callback into hook content by filtering Wordpress function
+add_filter("the_content", "social_media_icons_front");
