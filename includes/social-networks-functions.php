@@ -57,7 +57,7 @@ function social_media_section_settings()
     register_setting("social_media_section", "social-media-twitter");
 }
 
-/*  Creaation of admin page - html  */
+/*  Creation of admin page - html  */
 
 // Function that create html Facebook
 function social_media_facebook_switch()
@@ -116,7 +116,7 @@ function social_media_icons_front($social_media_icons)
     $link = esc_url($link);
 
     // Creation of the HTML structure
-    $html = "<div class='container row'><div class='h3'>Partager sur : </div>";
+    $html = "<div class='container row' style='display: flex; margin: 25px'><div class='h3'>Partager sur : </div>";
 
     // Shake if social Facebook is activate and render html code
     if (get_option("social-media-facebook") == 'activate') {
@@ -138,7 +138,7 @@ function social_media_icons_front($social_media_icons)
         </div>";
     }
 
-    // // Shake if social LinkedIn is activate
+    // Shake if social LinkedIn is activate
     if (get_option("social-media-linkedin") == 'activate') {
         $html = $html . "
         <div class='col-1' style='margin-left: 5px; margin-right: 5px'>
