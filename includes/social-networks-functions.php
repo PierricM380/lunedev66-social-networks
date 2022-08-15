@@ -18,7 +18,14 @@ add_action("admin_menu", "social_media_sidebar");
 
 function social_media_sidebar()
 {
-    add_menu_page("My First Page", "PierricM Social Networks", "manage_options", "social-media", "social_media_page", "dashicons-share");
+    add_menu_page(
+        "My First Page",
+        "PierricM Social Networks",
+        "manage_options",
+        "social-media",
+        "social_media_page",
+        "dashicons-share"
+    );
 }
 
 /* Creation of the topbar */
@@ -47,9 +54,27 @@ function social_media_section_settings()
     add_settings_section("social_media_section", "", null, "social-media");
 
     // Fields creation
-    add_settings_field("social-media-facebook", "Diffuser sur Facebook", "social_media_facebook_switch", "social-media", "social_media_section");
-    add_settings_field("social-media-linkedin", "Diffuser sur Linkedin", "social_media_linkedin_switch", "social-media", "social_media_section");
-    add_settings_field("social-media-twitter", "Diffuser sur Twitter", "social_media_twitter_switch", "social-media", "social_media_section");
+    add_settings_field(
+        "social-media-facebook",
+        "Diffuser sur Facebook",
+        "social_media_facebook_switch",
+        "social-media",
+        "social_media_section"
+    );
+    add_settings_field(
+        "social-media-linkedin",
+        "Diffuser sur Linkedin",
+        "social_media_linkedin_switch",
+        "social-media",
+        "social_media_section"
+    );
+    add_settings_field(
+        "social-media-twitter",
+        "Diffuser sur Twitter",
+        "social_media_twitter_switch",
+        "social-media",
+        "social_media_section"
+    );
 
     // Saving fields
     register_setting("social_media_section", "social-media-facebook");
