@@ -116,7 +116,7 @@ function social_media_twitter_switch()
 function social_media_page()
 { ?>
     <div class="container">
-        <h1>Réseaux sociaux</h1>
+        <h1>PierricM Social Network</h1>
         <p>Veuillez sélectionner les réseaux sociaux que vous souhaitez faire apparaître dans vos articles : </p>
 
         <form method="post" action="options.php">
